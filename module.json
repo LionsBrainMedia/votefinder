@@ -1,0 +1,66 @@
+{
+  "id": "votefinder",
+  "title": "Votefinder",
+  "description": "Foundry support for Votefinder, by Lion's Brain Media.",
+  "version": "1.0",
+  "authors": [
+    {"name": "W. Brian Lane" 
+    }
+  ],
+  "compatibility": {
+    "minimum": "11.308",
+    "verified": "11.308"
+  },
+  "relationships": {
+    "systems": [{
+      "id": "pf2e",
+      "type": "system",
+      "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+      "compatibility": {
+        "minimum": "5.3.2"
+      }
+    }]
+  },
+  "packs": [
+    {
+      "label": "Votefinder Backgrounds",
+      "type": "Item",
+      "name": "votefinder-backgrounds",
+      "path": "./packs/votefinder-backgrounds.db",
+      "system": "pf2e",
+      "package": "votefinder",
+      "private": false
+    },
+      {
+      "label": "Votefinder Activities",
+      "type": "Item",
+      "name": "votefinder-activities",
+      "path": "./packs/votefinder-activities.db",
+      "system": "pf2e",
+      "package": "votefinder",
+      "private": false
+    },
+      {
+      "label": "Votefinder Candidate Table",
+      "type": "JournalEntry",
+      "name": "votefinder-candidates",
+      "path": "./packs/votefinder-candidates.db",
+      "system": "pf2e",
+      "package": "votefinder",
+      "private": false
+    }
+  ],
+    "flags": {
+    "votefinder": {
+      "pf2e-homebrew": {
+        "actionTraits": {
+          "campaign": "Campaign"
+        }
+        }
+      }
+    },
+
+  "url": "https://github.com/LionsBrainMedia/votefinder",
+  "manifest": "https://raw.githubusercontent.com/LionsBrainMedia/votefinder/master/module.json",
+  "download": "https://github.com/LionsBrainMedia/votefinder/archive/refs/heads/main.zip"
+}
